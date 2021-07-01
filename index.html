@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+</head>
+<style>
+    body {
+        position: relative;
+        min-height: 100vh;
+        padding-bottom: 55px;
+    }
+    .footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .navbar-brand {
+        font-size: 30px;
+    }
+    .form-control-lg:focus {
+        border-color: none;
+        box-shadow: none;
+    } 
+    .form-control-lg {
+        border-color: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: rgb(32, 28, 28);
+    } 
+    .btn-info {
+        border-radius: 0;
+    }
+    .rankUpDown, .rankUpDown2{
+      font-size: 13px;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <div class="container">
+        <a class="navbar-brand" href="#">Movie Database</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse mr-auto" id="navbarColor02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active mr-1">
+              <a class="nav-link" href="#theatres">Theatres <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-1">
+              <a class="nav-link" href="#popular-movie">Popular Movies</a>
+            </li>
+            <li class="nav-item mr-1">
+              <a class="nav-link" href="#popular-tv">Popular TV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </nav>
+
+    <!-- <div class="row" id="soon-movies"></div> -->
+
+    <div class="container searchContainer">
+        <div class="search card card-body">
+            <h2 class="text-center">IMDB Movie Database</h2>
+            <p class="lead text-center">Enter movie name to fetch movies from Imdb</p>
+            <form id="movieForm">
+                <div class="input-group">
+                <input type="text" id="searchMovie" class="form-control form-control-lg mb-2" placeholder="enter a movie name..">
+                <span class="input-group-btn">
+                <input type="submit" class="btn btn-info btn-lg btn-block" id="btn">
+            </span>
+            </div>
+            </form>
+        </div>
+        <br>
+        <div class="row" id="movieList"></div>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h3 class="text-center" id="theatres">In The Theatres</h3>
+            <div id="theatre-movies" class="row"></div>
+        </div>
+        <div class="jumbotron">
+                    <h3 class="text-center" id="popular-movie">Poupular Movies</h3>
+                    <div id="popular-movies" class="row"></div>
+                    <h3 class="text-center" id="popular-tv">Poupular TV Shows</h3>
+                    <div id="popular-shows" class="row"></div>
+                </div>
+        </div>
+    </div>
+
+    <div class="mt-5 p-3 text-center bg-dark footer">
+        Movie Database &copy;2020
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="/movie.js"></script>
+    <script src="/ui.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>
